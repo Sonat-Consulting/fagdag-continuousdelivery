@@ -65,3 +65,19 @@ https://jenkins.io/doc/tutorials/build-a-multibranch-pipeline-project/
 
 5) Blue Ocean pipeline  
 https://jenkins.io/doc/tutorials/create-a-pipeline-in-blue-ocean/  
+
+
+## Notifications
+
+
+Oppgave
+Send en notification til Slack ved start og stopp av pipeline-eksekvering.
+
+Legg på ulike properties i meldingene for å identifisere jobben.
+
+Eksempler på tilgjengelige properties kan man finne her: http://localhost:8080/job/<jobbnavn>/pipeline-syntax/globals
+
+Bruk forskjellige meldinger avhengig av status på bygget.
+
+Info om slack-integrasjon: https://my.slack.com/services/new/jenkins-ci
+
