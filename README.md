@@ -81,3 +81,17 @@ Bruk forskjellige meldinger avhengig av status på bygget.
 
 Info om slack-integrasjon: https://my.slack.com/services/new/jenkins-ci
 
+
+## Health check
+(krever HTTP Request plugin)
+
+På slutten av en pipeline kan man kjøre en healthcheck mot applikasjonen for å se om den kom opp som den skulle.
+
+Oppgave
+Utvid controller med en health-check-metode som svarer ok/ikke ok på om systemet er oppe
+Alternativt: simuler en healthcheck ved å f.eks gå mot et endepunkt her https://jsonplaceholder.typicode.com/
+
+Oppgave
+Legg inn et steg i pipeline som kjører mot healthcheck-endepunktet, og verifiserer at deploy gikk ok.
+Bruk gjerne timeouts/retry i pipeline
+
