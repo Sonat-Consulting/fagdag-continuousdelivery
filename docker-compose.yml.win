@@ -2,7 +2,7 @@ version: "2"
 services:
   db:
       image: mariadb
-      container_name: mariadb2
+      container_name: mariadb
       environment:
           - MYSQL_ROOT_PASSWORD=fagdag
           - MYSQL_DATABASE=fagdag
@@ -11,7 +11,7 @@ services:
       volumes:
           - ./database:/var/lib/mysql
   phpmyadmin:
-      image: phpmyadmin/phpmyadmin2
+      image: phpmyadmin/phpmyadmin
       container_name: phpmyadmin
       environment:
           - PMA_ARBITRARY=1
@@ -23,16 +23,15 @@ services:
           - /sessions
   sonarqube:
       image: sonarqube:7.1-alpine
-      container_name: sonarqube2
+      container_name: sonarqube
       ports:
         - 9000:9000
         - 9092:9092
   jenkins:
       image: jenkinsroot
-      container_name: jenkinsci2
+      container_name: jenkinsci
       volumes:
         - ./jenkins-data:/var/jenkins_home
         - /var/run/docker.sock:/var/run/docker.sock
-        - %HOMEPATH%:/home
       ports:
         - 8080:8080
