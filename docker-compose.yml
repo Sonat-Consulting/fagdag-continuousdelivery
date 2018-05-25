@@ -2,7 +2,7 @@ version: "2"
 services:
   db:
       image: mariadb
-      container_name: mariadb2
+      container_name: mariadb
       environment:
           - MYSQL_ROOT_PASSWORD=fagdag
           - MYSQL_DATABASE=fagdag
@@ -23,7 +23,7 @@ services:
           - /sessions
   sonarqube:
       image: sonarqube:7.1-alpine
-      container_name: sonarqube2
+      container_name: sonarqube
       ports:
         - 9000:9000
         - 9092:9092
