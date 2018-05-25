@@ -11,7 +11,7 @@ services:
       volumes:
           - ./database:/var/lib/mysql
   phpmyadmin:
-      image: phpmyadmin/phpmyadmin2
+      image: phpmyadmin/phpmyadmin
       container_name: phpmyadmin
       environment:
           - PMA_ARBITRARY=1
@@ -28,11 +28,13 @@ services:
         - 9000:9000
         - 9092:9092
   jenkins:
-      image: jenkinsroot
+      # image: jenkinsroot
+      build:
+        context: ./docker
       container_name: jenkinsci2
       volumes:
-        - ./jenkins-data:/var/jenkins_home
+        #- ./jenkins-data:/var/jenkins_home
         - /var/run/docker.sock:/var/run/docker.sock
-        - $HOME:/home
+        #- ./home:/home
       ports:
         - 8080:8080
