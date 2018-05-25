@@ -14,9 +14,13 @@ docker exec -it jenkinsci bash
 bash-4.4# cd /var/jenkins_home/
 
 4) Lenker
+
 Jenkins: http://localhost:8080/
+
 phpmyadmin: http://localhost:9080
+
 Mariadb: http://localhost:3306/
+
 SonarQube: http://localhost:9000
 
 5) Følgende plugins kan være greit å installere i Jenkins
